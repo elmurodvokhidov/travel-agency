@@ -3,33 +3,16 @@
 Welcome to the **Travel Agency Dashboard**! 🚀  
 A modern platform to effortlessly generate AI-powered trip itineraries 🌍, book adventures 🧳, and manage trips through a powerful admin dashboard 🛠️.
 
-<p align="center">
-  <a href="https://github.com/elmurodvokhidov/travel-agency">
-    <img src="https://img.shields.io/github/stars/elmurodvokhidov/travel-agency?style=for-the-badge" alt="Stars">
-  </a>
-  <a href="https://github.com/elmurodvokhidov/travel-agency/fork">
-    <img src="https://img.shields.io/github/forks/elmurodvokhidov/travel-agency?style=for-the-badge" alt="Forks">
-  </a>
-  <a href="https://github.com/elmurodvokhidov/travel-agency/issues">
-    <img src="https://img.shields.io/github/issues/elmurodvokhidov/travel-agency?style=for-the-badge" alt="Issues">
-  </a>
-  <a href="https://github.com/elmurodvokhidov/travel-agency/blob/main/LICENSE">
-    <img src="https://img.shields.io/github/license/elmurodvokhidov/travel-agency?style=for-the-badge" alt="License">
-  </a>
-  <br/>
-  <a href="https://visitor-badge.laobi.icu/badge?page_id=elmurodvokhidov/travel-agency">
-    <img src="https://visitor-badge.laobi.icu/badge?page_id=elmurodvokhidov/travel-agency" alt="Visitors">
-  </a>
-  <a href="https://github.com/elmurodvokhidov/travel-agency/commits/main">
-    <img src="https://img.shields.io/github/last-commit/elmurodvokhidov/travel-agency?style=for-the-badge" alt="Last Commit">
-  </a>
-  <a href="https://github.com/elmurodvokhidov/travel-agency/pulls">
-    <img src="https://img.shields.io/badge/PRs-Welcome-brightgreen.svg?style=for-the-badge" alt="Pull Requests Welcome">
-  </a>
-  <a href="https://github.com/elmurodvokhidov/travel-agency/deployments">
-    <img src="https://img.shields.io/github/deployments/elmurodvokhidov/travel-agency/github-pages?style=for-the-badge" alt="Deployment">
-  </a>
-</p>
+<div align="center">
+  <img src="https://img.shields.io/github/stars/elmurodvokhidov/travel-agency?style=for-the-badge" alt="Stars">
+  <img src="https://img.shields.io/github/forks/elmurodvokhidov/travel-agency?style=for-the-badge" alt="Forks">
+  <img src="https://img.shields.io/github/issues/elmurodvokhidov/travel-agency?style=for-the-badge" alt="Issues">
+  <img src="https://img.shields.io/github/license/elmurodvokhidov/travel-agency?style=for-the-badge" alt="License">
+  <!-- <img src="https://visitor-badge.laobi.icu/badge?page_id=elmurodvokhidov/travel-agency" alt="Visitors"> -->
+  <img src="https://img.shields.io/github/last-commit/elmurodvokhidov/travel-agency?style=for-the-badge" alt="Last Commit">
+  <img src="https://img.shields.io/badge/PRs-Welcome-brightgreen.svg?style=for-the-badge" alt="Pull Requests Welcome">
+  <img src="https://img.shields.io/github/deployments/elmurodvokhidov/travel-agency/github-pages?style=for-the-badge" alt="Deployment">
+</div>
 
 ---
 
