@@ -1,38 +1,15 @@
 import { Header, StatsCard, TripCard } from "components";
+import { allTrips, dashboardStats, user } from "~/constants";
+
+const {
+    totalUsers,
+    usersJoined,
+    totalTrips,
+    tipsCreated,
+    userRole
+} = dashboardStats;
 
 export default function Dashboard() {
-    const user = {
-        name: "Elmurod",
-        email: "elmurod@gmail.com",
-        imageUrl: "/assets/images/david.webp",
-    };
-
-    const dashboardStats = {
-        totalUsers: 12500,
-        usersJoined: {
-            currentMonth: 200,
-            lastMonth: 150,
-        },
-        totalTrips: 5000,
-        tipsCreated: {
-            currentMonth: 300,
-            lastMonth: 250,
-        },
-        userRole: {
-            total: 100,
-            currentMonth: 20,
-            lastMonth: 15,
-        },
-    };
-
-    const {
-        totalUsers,
-        usersJoined,
-        totalTrips,
-        tipsCreated,
-        userRole
-    } = dashboardStats;
-
     return (
         <main className="dashboard wrapper">
             <Header
@@ -65,7 +42,32 @@ export default function Dashboard() {
                 </div>
             </section>
 
-            <TripCard />
+            <section className="container">
+                <h1 className="text-xl font-semibold text-dark-100">
+                    Created Trips
+                </h1>
+
+                <div className="trip-grid">
+                    {allTrips.slice(0, 4).map(({
+                        id,
+                        name,
+                        imageUrls,
+                        itinerary,
+                        tags,
+                        estimatedPrice
+                    }) => (
+                        <TripCard
+                            key={id}
+                            id={id.toString()}
+                            name={name}
+                            imageUrl={imageUrls[0]}
+                            location={itinerary?.[0]?.location ?? ""}
+                            tags={tags}
+                            price={estimatedPrice}
+                        />
+                    ))}
+                </div>
+            </section>
         </main>
     )
 }
