@@ -1,9 +1,18 @@
 import { Header } from 'components';
 import { ColumnDirective, ColumnsDirective, GridComponent } from '@syncfusion/ej2-react-grids';
-import { users } from '~/constants';
-import { cn } from 'lib/utils';
+import { cn, formatDate } from 'lib/utils';
+import { getAllUsers } from '~/appwrite/auth';
+import type { Route } from './+types/all-users';
 
-export default function AllUsers() {
+export async function loader() {
+    const { users, total } = await getAllUsers(10, 0);
+
+    return { users, total };
+}
+
+export default function AllUsers({ loaderData }: Route.ComponentProps) {
+    const { users } = loaderData;
+
     return (
         <main className="all-users wrapper">
             <Header
@@ -24,6 +33,7 @@ export default function AllUsers() {
                                     src={props.imageUrl}
                                     alt="user"
                                     className="size-8 rounded-full aspect-square"
+                                    referrerPolicy='no-referrer'
                                 />
                                 <span>{props.name}</span>
                             </div>
@@ -33,22 +43,16 @@ export default function AllUsers() {
                     <ColumnDirective
                         field='email'
                         headerText='Email'
-                        width='150'
+                        width='200'
                         textAlign='Left'
                     />
 
                     <ColumnDirective
-                        field='dateJoined'
+                        field='joinedAt'
                         headerText='Date Joined'
-                        width='120'
+                        width='140'
                         textAlign='Left'
-                    />
-
-                    <ColumnDirective
-                        field='tripCreateditineraryCreated'
-                        headerText='Trip Created'
-                        width='130'
-                        textAlign='Left'
+                        template={({ joinedAt }: { joinedAt: string }) => formatDate(joinedAt)}
                     />
 
                     <ColumnDirective
@@ -56,10 +60,10 @@ export default function AllUsers() {
                         headerText='Type'
                         width='100'
                         textAlign='Left'
-                        template={(props: UserData) => (
-                            <article className={cn("status-column", props.status === "user" ? "bg-success-50" : "bg-light-300")}>
-                                <div className={cn("size-1.5 rounded-full", props.status === "user" ? "bg-success-500" : "bg-light-500")} />
-                                <h3 className={cn("font-inter font-medium text-xs", props.status === "user" ? "text-success-700" : "text-gray-500")}>{props.status}</h3>
+                        template={({ status }: UserData) => (
+                            <article className={cn("status-column", status === "user" ? "bg-success-50" : "bg-light-300")}>
+                                <div className={cn("size-1.5 rounded-full", status === "user" ? "bg-success-500" : "bg-light-500")} />
+                                <h3 className={cn("font-inter font-medium text-xs", status === "user" ? "text-success-700" : "text-gray-500")}>{status}</h3>
                             </article>
                         )}
                     />
