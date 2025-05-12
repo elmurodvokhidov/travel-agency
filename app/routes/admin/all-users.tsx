@@ -17,7 +17,7 @@ export default function AllUsers({ loaderData }: Route.ComponentProps) {
         <main className="all-users wrapper">
             <Header
                 title="Manage Users"
-                description="Filter, sort and access detailed user profiles."
+                description="Filter, sort and access detailed user profiles"
             />
 
             <GridComponent dataSource={users} gridLines='None'>
